@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from glob import glob
 
-package_name = 'lidar_scan'
+package_name = 'lidar_scanv2'
 
 setup(
     name=package_name,

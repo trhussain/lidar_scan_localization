@@ -9,12 +9,12 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
 
-    pkg_share = launch_ros.substitutions.FindPackageShare(package='lidar_scan').find('lidar_scan')
+    pkg_share = launch_ros.substitutions.FindPackageShare(package='lidar_scanv2').find('lidar_scanv2')
     default_model_path = os.path.join(pkg_share, 'wamv.urdf')
     default_rviz_config_path = os.path.join(pkg_share, 'tahseen.rviz')
     
     lidar_pub = Node(
-            package='lidar_scan',
+            package='lidar_scanv2',
             executable='lidar_pub'
     )
     lidar0_frame=Node(
@@ -57,11 +57,11 @@ def generate_launch_description():
  
     
     colorMappingNode = Node(
-            package='lidar_scan',
+            package='lidar_scanv2',
             executable='colorMappingNode'
     )
     fixed_math_node = Node(
-        package='lidar_scan',
+        package='lidar_scanv2',
         executable='fixed_math'
     )
     base_link=Node(
