@@ -9,7 +9,7 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
 
-    pkg_share = launch_ros.substitutions.FindPackageShare(package='lidar_scanv2').find('lidar_scanv2')
+    pkg_share = launch_ros.substitutions.FindPackageShare(package='lidar_scan').find('lidar_scan')
     default_model_path = os.path.join(pkg_share, 'wamv.urdf')
     default_rviz_config_path = os.path.join(pkg_share, 'tahseen.rviz')
     
@@ -57,11 +57,11 @@ def generate_launch_description():
  
     
     colorMappingNode = Node(
-            package='lidar_scanv2',
+            package='lidar_scan',
             executable='colorMappingNode'
     )
     fixed_math_node = Node(
-        package='lidar_scanv2',
+        package='lidar_scan',
         executable='fixed_math'
     )
     base_link=Node(
@@ -134,6 +134,7 @@ def generate_launch_description():
         spawn_entity,
         robot_localization_node,
         pcl2_ls,
+        rviz_node
         #map_node,
         #colorMappingNode
         #fixed_math_node
