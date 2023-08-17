@@ -3,7 +3,14 @@ import os
 from glob import glob
 
 package_name = 'lidar_scan'
+'''
+share + package_name, [file]
+Lines allow the package to access specific files that I want accessible, such as the RVIZ config, or URDF model
 
+The entry_points inputs allow access to other packages and allowing them to run.
+
+
+'''
 setup(
     name=package_name,
     version='0.0.0',
@@ -11,7 +18,7 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name, ['package.xml']), 
         ('share/' + package_name,['ekf.yaml']),
         ('share/' + package_name,['wamv.urdf']),
         ('share/' + package_name,['robot.rviz']),
