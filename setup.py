@@ -14,7 +14,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name,['ekf.yaml']),
         ('share/' + package_name,['wamv.urdf']),
-        ('share/' + package_name,['tahseen.rviz']),
+        ('share/' + package_name,['robot.rviz']),
         (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*launch.[pxy][yma]*'))),
     ],
     install_requires=['setuptools'],

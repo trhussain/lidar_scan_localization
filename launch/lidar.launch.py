@@ -11,7 +11,7 @@ def generate_launch_description():
 
     pkg_share = launch_ros.substitutions.FindPackageShare(package='lidar_scan').find('lidar_scan')
     default_model_path = os.path.join(pkg_share, 'wamv.urdf')
-    default_rviz_config_path = os.path.join(pkg_share, 'tahseen.rviz')
+    default_rviz_config_path = os.path.join(pkg_share, 'robot.rviz')
     
     lidar_pub = Node(
             package='lidar_scanv2',
